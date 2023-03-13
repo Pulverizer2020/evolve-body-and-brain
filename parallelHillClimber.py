@@ -10,6 +10,7 @@ class PARALLEL_HILL_CLIMBER():
     # delete all remaining fitness and brain files
     os.system("rm fitness*.nndf")
     os.system("rm brain*.nndf")
+    os.system("rm body*.nndf")
 
 
     self.nextAvailableID = 0
@@ -40,6 +41,8 @@ class PARALLEL_HILL_CLIMBER():
     for key in self.parents:
       self.children[key] = copy.deepcopy(self.parents[key])
       self.children[key].Set_ID(self.nextAvailableID)
+      print("self.children[key]", self.children[key])
+      print("self.children[key].myID", self.children[key].myID)
       self.nextAvailableID += 1
 
   def Mutate(self):
@@ -48,7 +51,7 @@ class PARALLEL_HILL_CLIMBER():
 
   def Evaluate(self, solutions):
     for key in solutions:
-      solutions[key].Start_Simulation("DIRECT", parallel=True, deleteBrain="True")
+      solutions[key].Start_Simulation("DIRECT", parallel=True, deleteBrainAndBody="True")
     
     for key in solutions:
       solutions[key].Wait_For_Simulation_To_End()
@@ -60,10 +63,10 @@ class PARALLEL_HILL_CLIMBER():
 
     bestprevious = copy.deepcopy(self.parents[0])
     for key in self.parents:
-      if self.children[key].fitness > bestprevious.fitness:
+      if self.children[key].fitness >= bestprevious.fitness:
         self.parents[key] = copy.deepcopy(self.children[key])
         bestprevious = copy.deepcopy(self.children[key])
-      elif bestprevious.fitness > self.parents[key].fitness:
+      elif bestprevious.fitness >= self.parents[key].fitness:
         self.parents[key] = copy.deepcopy(bestprevious)
 
     # if self.parent.fitness < self.child.fitness:
@@ -89,7 +92,7 @@ class PARALLEL_HILL_CLIMBER():
     
     print("best fitness:", bestParentFitness)
     
-    bestParent.Start_Simulation("GUI", parallel=False, deleteBrain="False") # don't run this simulation in parallel with other things
+    bestParent.Start_Simulation("GUI", parallel=False, deleteBrainAndBody="False") # don't run this simulation in parallel with other things
 
   def Write_Best_Brain_To_File(self):
     bestParentFitness = -np.inf

@@ -13,7 +13,7 @@ from robot import ROBOT
 
 class SIMULATION:
 
-  def __init__(self, directOrGui: str, solutionId: str, deleteBrain: str):
+  def __init__(self, directOrGui: str, solutionId: str, deleteBrainAndBody: str):
     self.directOrGui = directOrGui
     if directOrGui == "DIRECT":
       self.physicsClient = p.connect(p.DIRECT)
@@ -24,7 +24,7 @@ class SIMULATION:
     p.setGravity(0,0,c.gravityY)
 
     self.world = WORLD()
-    self.robot = ROBOT(solutionId, deleteBrain=deleteBrain)
+    self.robot = ROBOT(solutionId, deleteBrainAndBody=deleteBrainAndBody)
 
   def __del__(self):
 

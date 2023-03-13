@@ -9,22 +9,25 @@ from motor import MOTOR
 
 class ROBOT:
 
-  def __init__(self, solutionId: str, deleteBrain: str):
+  def __init__(self, solutionId: str, deleteBrainAndBody: str):
 
     
     self.solutionId = str(solutionId)
 
-    self.robotId = p.loadURDF("body.urdf")
     
 
-    self.nn = NEURAL_NETWORK("brain" + solutionId + ".nndf")
+    self.robotId = p.loadURDF(f"body{solutionId}.urdf")
+    
+
+    self.nn = NEURAL_NETWORK(f"brain{solutionId}.nndf")
 
     pyrosim.Prepare_To_Simulate(self.robotId)
     self.Prepare_To_Sense()
     self.Prepare_To_Act()
 
-    if deleteBrain == "True":
+    if deleteBrainAndBody == "True":
       os.system(f"rm brain{solutionId}.nndf")
+      os.system(f"rm body{solutionId}.urdf")
 
   def Prepare_To_Sense(self):
     self.sensors = {}
@@ -62,7 +65,8 @@ class ROBOT:
     # if zPosition < 2:
     #   fitness = xPosition*zPosition
     # else:
-    fitness = xPosition*zPosition + zPosition*2
+    # fitness = xPosition*zPosition + zPosition*2
+    fitness = xPosition
 
     f = open(f"tmp{self.solutionId}.txt", "w")
     f.write(str(fitness))
