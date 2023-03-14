@@ -33,6 +33,9 @@ class SIMULATION:
   def Run(self):
     
     for i in range(c.SIM_LENGTH):
+      basePos, baseOrn = p.getBasePositionAndOrientation(self.robot.robotId)
+      p.resetDebugVisualizerCamera( cameraDistance = 5, cameraYaw=75 + i/6, cameraPitch=-30, cameraTargetPosition = basePos)
+
     
       p.stepSimulation()
       self.robot.Sense(i)

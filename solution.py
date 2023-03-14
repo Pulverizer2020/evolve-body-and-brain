@@ -1,9 +1,7 @@
 import os
 import numpy as np
-import random
 import time
 import pyrosim.pyrosim as pyrosim
-import constants as c
 import networkx as nx
 
 from randomgenotype import generateRandomGenotype

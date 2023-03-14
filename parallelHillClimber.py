@@ -3,27 +3,37 @@ import os
 import numpy as np
 from solution import SOLUTION
 import constants as c
+import pickle
 
 
 class PARALLEL_HILL_CLIMBER():
-  def __init__(self) -> None:
+  def __init__(self, saveData:bool, epoch:int | None, population=None) -> None:
     # delete all remaining fitness and brain files
     os.system("rm fitness*.nndf")
     os.system("rm brain*.nndf")
     os.system("rm body*.nndf")
 
+    self.saveData = saveData
+    self.epoch = epoch # how many times parallel hill climber has been run
+
 
     self.nextAvailableID = 0
 
-    self.parents = {}
-    for i in range(c.populationSize):
-      self.parents[i] = SOLUTION(self.nextAvailableID)
-      self.nextAvailableID += 1
+    if population:
+      self.parents = population
+      self.nextAvailableID = max(population, key=lambda key: population[key].myID) + 1
+    else:
+      self.parents = {}
+      
+      for i in range(c.populationSize):
+        self.parents[i] = SOLUTION(self.nextAvailableID)
+        self.nextAvailableID += 1
 
   def Evolve(self):
     self.Evaluate(self.parents)
     
-    for currentGeneration in range(c.numberOfGenerations):
+    for currentGeneration in range(c.numberOfGenerations+1):
+      self.currentGeneration = currentGeneration
       self.Evolve_For_One_Generation()
 
   
@@ -32,8 +42,10 @@ class PARALLEL_HILL_CLIMBER():
     self.Mutate()
     self.Evaluate(self.children)
     self.Print()
-    self.Select()
+    bestFitness = self.Select()
     self.Print()
+    if self.saveData:
+      self.Save_Data(thisRoundBestFitness=bestFitness)
     
 
   def Spawn(self):
@@ -57,18 +69,23 @@ class PARALLEL_HILL_CLIMBER():
     
 
   def Select(self):
-    half = len(self.parents)//2
+    bestFitness = -np.inf
+    bestcreature = copy.deepcopy(self.parents[0])
 
-    bestprevious = copy.deepcopy(self.parents[0])
     for key in self.parents:
-      if self.children[key].fitness >= bestprevious.fitness:
-        self.parents[key] = copy.deepcopy(self.children[key])
-        bestprevious = copy.deepcopy(self.children[key])
-      elif bestprevious.fitness >= self.parents[key].fitness:
-        self.parents[key] = copy.deepcopy(bestprevious)
+      # find best fitness & which children will die or live on
+      if self.children[key].fitness >= bestFitness:
+        bestFitness = self.children[key].fitness
+        bestcreature = copy.deepcopy(self.children[key])
+      if self.parents[key].fitness > bestFitness:
+        bestFitness = self.parents[key].fitness
+        bestcreature = copy.deepcopy(self.parents[key])
+        # self.parents[key] = copy.deepcopy(self.children[key])
+      # else:
+      self.parents[key] = copy.deepcopy(bestcreature)
+        
 
-    # if self.parent.fitness < self.child.fitness:
-    #   self.parent = self.child
+    return bestFitness
   
   def Print(self):
     print("")
@@ -92,14 +109,26 @@ class PARALLEL_HILL_CLIMBER():
     
     bestParent.Start_Simulation("GUI", parallel=False, deleteBrainAndBody="False") # don't run this simulation in parallel with other things
 
-  def Write_Best_Brain_To_File(self):
-    bestParentFitness = -np.inf
-    bestParent = None
-    for key in self.parents:
-      
-      if self.parents[key].fitness > bestParentFitness:
-        bestParent = copy.deepcopy(self.parents[key])
-        bestParentFitness = self.parents[key].fitness
-    
-    bestParent.Generate_Brain()
+  def Save_Data(self, thisRoundBestFitness:float):
+    if self.saveData:
+      # save the best fitness every generation
+      if not os.path.exists(f"saved_data"):
+        os.makedirs(f"saved_data")
+      if not os.path.exists(f"saved_data/epoch{self.epoch}"):
+        os.makedirs(f"saved_data/epoch{self.epoch}")
+      # if not os.path.exists(f"saved_data/epoch{self.epoch}/best_fitnesses"):
+      #   os.makedirs(f"saved_data/epoch{self.epoch}/best_fitnesses")
+      with open(f"saved_data/epoch{self.epoch}/best_fitnesses.txt", "a") as f:
+        f.write(str(thisRoundBestFitness) + "\n")
+
+
+      # save population every so often
+      if self.currentGeneration % 50 == 0:
+        if not os.path.exists(f"saved_data"):
+          os.makedirs(f"saved_data")
+        if not os.path.exists(f"saved_data/epoch{self.epoch}"):
+          os.makedirs(f"saved_data/epoch{self.epoch}")
+        if not os.path.exists(f"saved_data/epoch{self.epoch}/populations"):
+          os.makedirs(f"saved_data/epoch{self.epoch}/populations")
+        pickle.dump(self.parents, open(f"saved_data/epoch{self.epoch}/populations/population_gen{self.currentGeneration}.p", "wb"))
     
