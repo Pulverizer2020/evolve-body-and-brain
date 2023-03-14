@@ -27,7 +27,6 @@ class BODY_BUILDER:
     def __init__(self, genotype: nx.DiGraph, solutionId: str) -> None:
         self.genotype = genotype
         self.solutionId = solutionId
-        print("my self.solutionId", self.solutionId)
 
 
         self.build_body_array = []
@@ -64,14 +63,12 @@ class BODY_BUILDER:
             parentCubeCenter, upstreamJointPosition, parentUpstreamJointProportion = node_position_attributes[parent_node_id]
 
             # generate edge
-            print("generate edge", (parent_node_id, child_node_id))
             parentCenterToChildJointUnitVector = self.Generate_Edge(
                 parent_node["length"], parent_node["width"], parent_node["height"], 
                 this_edge["length_proportion"], this_edge["width_proportion"], this_edge["height_proportion"], 
                 parent_node_id, child_node_id, parentCubeCenter, upstreamJointPosition, parentUpstreamJointProportion)
 
             # generate node at the end of the edge
-            print("generate node", child_node_id)
             myCubeCenter, upstreamJointPosition, myUpstreamJointProportion = self.Generate_Node(
                 child_node_id, parentCenterToChildJointUnitVector, 
                 child_node["length"], child_node["width"], child_node["height"], child_node["has_sensor"])
@@ -115,7 +112,6 @@ class BODY_BUILDER:
         
 
         # then create the body part
-        print("pushing body part", my_node_id)
         self.build_body_array.append(( 
             pyrosim.Send_Cube, 
             str(my_node_id),
@@ -134,7 +130,6 @@ class BODY_BUILDER:
         if iHaveSensor:
             my_brain_part_id = brain_counter.Get_Unique_Id()
             
-            print("pushing sensor", my_node_id)
             self.build_brain_array.append((
                 pyrosim.Send_Sensor_Neuron,
                 str(my_brain_part_id),
@@ -266,7 +261,6 @@ class BODY_BUILDER:
         
         
 
-        print("pushing joint", parent_node_id, child_node_id)
         self.build_body_array.append(( 
                 pyrosim.Send_Joint,
                 f"{parent_node_id}_{child_node_id}",
@@ -278,7 +272,6 @@ class BODY_BUILDER:
             ))
 
 
-        print("pushing motor neuron", parent_node_id, child_node_id)
         # every joint has a motor neuron
         self.build_brain_array.append((
             pyrosim.Send_Motor_Neuron,
@@ -301,7 +294,6 @@ class BODY_BUILDER:
         
 
         for bodypart in self.build_body_array:
-            print("bodypart:", bodypart)
             # build each cube / joint
             func = bodypart[0]
             args = bodypart[1:]

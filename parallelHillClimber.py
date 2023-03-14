@@ -41,8 +41,6 @@ class PARALLEL_HILL_CLIMBER():
     for key in self.parents:
       self.children[key] = copy.deepcopy(self.parents[key])
       self.children[key].Set_ID(self.nextAvailableID)
-      print("self.children[key]", self.children[key])
-      print("self.children[key].myID", self.children[key].myID)
       self.nextAvailableID += 1
 
   def Mutate(self):

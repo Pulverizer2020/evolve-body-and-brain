@@ -9,7 +9,7 @@ from bodybuilder import BODY_BUILDER
 
 
 
-def generateRandomGenotype(minLimbs, maxLimbs, lowSize, highSize):
+def generateRandomGenotype(minLimbs, maxLimbs, lowSize, highSize, forceSensor):
     # initially 3-6 limbs
     num_initial_limbs = np.random.randint(minLimbs,maxLimbs+1)
 
@@ -19,7 +19,7 @@ def generateRandomGenotype(minLimbs, maxLimbs, lowSize, highSize):
     node_attributes = {}
     for i in range(num_initial_limbs):
         
-        node_attributes[i] = generateRandomNodeAttributes(genotype=genotype, low=lowSize, high=highSize)
+        node_attributes[i] = generateRandomNodeAttributes(genotype=genotype, low=lowSize, high=highSize, forceSensor=forceSensor)
 
     nx.set_node_attributes(genotype, node_attributes)
 
@@ -36,14 +36,14 @@ def generateRandomGenotype(minLimbs, maxLimbs, lowSize, highSize):
     return genotype
 
 
-def generateRandomNodeAttributes(genotype, low:float, high:float):
+def generateRandomNodeAttributes(genotype, low:float, high:float, forceSensor:bool | None):
     return {
         "length": np.random.uniform(low=low, high=high),
         "width": np.random.uniform(low=low, high=high),
         "height": np.random.uniform(low=low, high=high),
         "recursive_limit": 0,
         "neuron_weights": {edge: np.random.uniform(low=-1, high=1) for edge in list(genotype.edges)}, # this is a dictionary of {(parentNodeId, childNodeId): neuron_weight}, being the neuron weights for all the motors this sensor will connect to (it's fully connected so all the edges of the graph)
-        "has_sensor": np.random.choice((True, False), size=(1,))[0]
+        "has_sensor": True if forceSensor else np.random.choice((True, False), size=(1,))[0]
     }
 
 def generateRandomEdgeAttributes():
