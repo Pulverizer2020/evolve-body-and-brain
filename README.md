@@ -72,16 +72,16 @@ Using the aforementioned methods, an incredible diversity of creatures were evol
 ### There were many hoppers, some side-swipers, and even a biped:
 
 <p float="left">
-  <img src="./media/creatures/epoch0_generation500.png" />
-  <img src="./media/creatures/epoch1_generation500.png" />
-  <img src="./media/creatures/epoch2_generation500.png" />
-  <img src="./media/creatures/epoch3_generation500.png" />
-  <img src="./media/creatures/epoch4_generation500.png" />
-  <img src="./media/creatures/epoch5_generation500.png" />
-  <img src="./media/creatures/epoch6_generation500.png" />
-  <img src="./media/creatures/epoch7_generation500.png" />
-  <img src="./media/creatures/epoch8_generation500.png" />
-  <img src="./media/creatures/epoch9_generation500.png" />
+  <img src="./media/creatures/epoch0_generation500.png" width="100" />
+  <img src="./media/creatures/epoch1_generation500.png" width="100" />
+  <img src="./media/creatures/epoch2_generation500.png" width="100" />
+  <img src="./media/creatures/epoch3_generation500.png" width="100" />
+  <img src="./media/creatures/epoch4_generation500.png" width="100" />
+  <img src="./media/creatures/epoch5_generation500.png" width="100" />
+  <img src="./media/creatures/epoch6_generation500.png" width="100" />
+  <img src="./media/creatures/epoch7_generation500.png" width="100" />
+  <img src="./media/creatures/epoch8_generation500.png" width="100" />
+  <img src="./media/creatures/epoch9_generation500.png" width="100" />
   <!-- <img src="/img3.png" width="100" /> -->
 </p>
 
