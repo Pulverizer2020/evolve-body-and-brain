@@ -75,7 +75,6 @@ Using the aforementioned methods, an incredible diversity of creatures were evol
   <img src="./media/creatures/epoch0_generation500.png" width="200" />
   <img src="./media/creatures/epoch1_generation500.png" width="200" />
   <img src="./media/creatures/epoch2_generation500.png" width="200" />
-  <img src="./media/creatures/epoch3_generation500.png" width="200" />
   <img src="./media/creatures/epoch4_generation500.png" width="200" />
   <img src="./media/creatures/epoch5_generation500.png" width="200" />
   <img src="./media/creatures/epoch6_generation500.png" width="200" />
@@ -89,7 +88,7 @@ The prevelance of hoppers is likely due to a limitation in the simulation: this 
 
 ### There was also one "dud," a creature which did not evolve very well for locomotion.
 
-IMAGE
+<img src="./media/creatures/epoch3_generation500.png" width="200" />
 
 This is an example of a creature finding a local maximum within the fitness landscape and being unable to escape. This creature developed a strategy of very quickly moving its front body parts to vibrate forward. The vibration method of locomotion is very fragile; if any small changes are made such as elongating a limb or changing a few neural weights, they are more likely to send the robot flailing rather than being a useful change.
 
@@ -99,7 +98,7 @@ fitness_landscape.png
 
 The following is a plot of the fitness of the most fit creature of an evolutionary epoch for every generation.
 
-fitness_plot.png
+<img src="./media/fitness_landscape.png" width="300" />
 
 Creatures' fitness progress as one might expect:
 
@@ -112,8 +111,6 @@ Creatures' fitness progress as one might expect:
 - **Some evolutionary runs have likely plateaued**, not improving their fitness for many generations, such as the dark blue and light blue runs.
 - **Some evolutionary runs are seen to make large improvements near the 500th generation**, such as the ones represented in the gray and red lines. These runs likely **could have achieved a higher fitness** if they were run for more generations.
 - **The fitness of the initial population of creatures is not a determining factor of the success of the evolutionary run.** The dark blue run can be seen to start with the lowest fitness, yet achieves the highest fitness at the end of the evolutionary simulation. Conversely, the light blue run started with one of the highest fitnesses, but ended with one of the lowest. **We can then infer that it is another part of these creatures' morphology, mutation or selection processes which creates fit robots.**
-
-Good robot (1) vs bad robot (3)
 
 ### Lineage
 
