@@ -92,13 +92,13 @@ The prevelance of hoppers is likely due to a limitation in the simulation: this 
 
 This is an example of a creature finding a local maximum within the fitness landscape and being unable to escape. This creature developed a strategy of very quickly moving its front body parts to vibrate forward. The vibration method of locomotion is very fragile; if any small changes are made such as elongating a limb or changing a few neural weights, they are more likely to send the robot flailing rather than being a useful change.
 
-fitness_landscape.png
+<img src="./media/fitness_landscape.png" width="300" />
 
 ### Fitness Graphs
 
 The following is a plot of the fitness of the most fit creature of an evolutionary epoch for every generation.
 
-<img src="./media/fitness_landscape.png" width="300" />
+<img src="./media/fitness_plot.png" width="300" />
 
 Creatures' fitness progress as one might expect:
 
