@@ -4,7 +4,7 @@ Evolve virtual creatures from nothing. Create order from disorder, harmony from 
 
 Made using [pybullet](https://pybullet.org/wordpress/index.php/forum-2/), extending [pyrosim](https://github.com/jbongard/pyrosim).
 
-<img src="./media/evolution_gif.gif" width="40" height="40" />
+<img src="./media/evolution_gif.gif" />
 
 # put video here
 
