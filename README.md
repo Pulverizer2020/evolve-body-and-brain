@@ -119,10 +119,8 @@ The following are the lineages of some robots within the `saved_data` folder, sh
 #### Epoch 2
 
 <p float="left">
-<p>
     <img src='./media/lineages/epoch2/gen0.png' width="100" alt='missing' style="margin-top:-5px" />
     <em>Gen 0. Fitness: 5.15</em>
-</p>
     <img src='./media/lineages/epoch2/gen50.png' width="100" alt='missing' />
     <em>Gen 50. Fitness: 13.04</em>
     <img src='./media/lineages/epoch2/gen100.png' width="100" alt='missing' />
@@ -142,75 +140,43 @@ The following are the lineages of some robots within the `saved_data` folder, sh
 #### Epoch 4
 
 <p float="left">
-  <figure>
     <img src='./media/lineages/epoch4/gen0.png' width="100" alt='missing' />
-    <figcaption>Gen 0. Fitness: 2.64</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 0. Fitness: 2.64</em>
     <img src='./media/lineages/epoch4/gen50.png' width="100" alt='missing' />
-    <figcaption>Gen 50. Fitness: 7.85</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 50. Fitness: 7.85</em>
     <img src='./media/lineages/epoch4/gen100.png' width="100" alt='missing' />
-    <figcaption>Gen 100. Fitness: 9.31</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 100. Fitness: 9.31</em>
     <img src='./media/lineages/epoch4/gen150.png' width="100" alt='missing' />
-    <figcaption>Gen 150. Fitness: 9.31</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 150. Fitness: 9.31</em>
     <img src='./media/lineages/epoch4/gen200.png' width="100" alt='missing' />
-    <figcaption>Gen 200. Fitness: 11.96</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 200. Fitness: 11.96</em>
     <img src='./media/lineages/epoch4/gen300.png' width="100" alt='missing' />
-    <figcaption>Gen 300. Fitness: 12.87</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 300. Fitness: 12.87</em>
     <img src='./media/lineages/epoch4/gen400.png' width="100" alt='missing' />
-    <figcaption>Gen 400. Fitness: 12.87</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 400. Fitness: 12.87</em>
     <img src='./media/lineages/epoch4/gen500.png' width="100" alt='missing' />
-    <figcaption>Gen 500. Fitness: 12.87</figcaption>
-  </figure>
+    <em>Gen 500. Fitness: 12.87</em>
 </p>
 
 #### Epoch 8
 
 <p float="left">
-  <figure>
     <img src='./media/lineages/epoch8/gen0.png' width="100" alt='missing' />
-    <figcaption>Gen 0. Fitness: 3.08</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 0. Fitness: 3.08</em>
     <img src='./media/lineages/epoch8/gen50.png' width="100" alt='missing' />
-    <figcaption>Gen 50. Fitness: 6.05</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 50. Fitness: 6.05</em>
     <img src='./media/lineages/epoch8/gen100.png' width="100" alt='missing' />
-    <figcaption>Gen 100. Fitness: 11.85</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 100. Fitness: 11.85</em>
     <img src='./media/lineages/epoch8/gen150.png' width="100" alt='missing' />
-    <figcaption>Gen 150. Fitness: 14.02</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 150. Fitness: 14.02</em>
     <img src='./media/lineages/epoch8/gen200.png' width="100" alt='missing' />
-    <figcaption>Gen 200. Fitness: 14.66</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 200. Fitness: 14.66</em>
     <img src='./media/lineages/epoch8/gen300.png' width="100" alt='missing' />
-    <figcaption>Gen 300. Fitness: 15.71</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 300. Fitness: 15.71</em>
     <img src='./media/lineages/epoch8/gen400.png' width="100" alt='missing' />
-    <figcaption>Gen 400. Fitness: 17.22</figcaption>
-  </figure>
-  <figure>
+    <em>Gen 400. Fitness: 17.22</em>
     <img src='./media/lineages/epoch8/gen500.png' width="100" alt='missing' />
-    <figcaption>Gen 500. Fitness: 18.66</figcaption>
-  </figure>
+    <em>Gen 500. Fitness: 18.66</em>
 </p>
 
 It can be seen here that the **body plans of creatures are mostly determined within the first 50 or 100 generations of evolution**. After that, only small changes are made to the body; **major improvements then come from optimizing the brain**.
