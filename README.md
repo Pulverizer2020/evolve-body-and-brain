@@ -6,7 +6,11 @@ Made using [pybullet](https://pybullet.org/wordpress/index.php/forum-2/), extend
 
 <img src="./media/evolution_gif.gif" />
 
-# put video here
+# Explainer Video
+
+[Link:](https://youtube.com)
+
+[![Explainer Video Image And Link](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 
 # Running the Code
 
@@ -27,13 +31,19 @@ First, install dependencies. Run `pip3 install -r requirements.txt`
 
 ### The Genotype
 
-These virtual creatures are stored using a **graph-based genotype**. Nodes represent a body part and edges represent a joint between body parts. Each node and edge holds physical information about it, including `length`, `width`, and `height`, for body part dimentions and `length_proportion`, `width_proportion`, `height_proportion` for where on a body part a joint should connect.
+These virtual creatures are stored using a **graph-based genotype**. Nodes represent a body part and edges represent a joint between body parts.
 
-genotype_attributes.png
+<img src="./media/genotype_phenotype_1.png" />
+<img src="./media/genotype_phenotype_6.png" />
+<img src="./media/genotype_phenotype_13.png" />
+
+Each node and edge holds physical information about it, including `length`, `width`, and `height`, for body part dimentions and `length_proportion`, `width_proportion`, `height_proportion` for where on a body part a joint should connect.
+
+<img src="./media/genotype_attributes.png" />
 
 Nodes also have the `neuron_weights` attribute which is the brain of robot. This holds the weights of this body part's portion of the brain. The robot's brain is a **1-layer fully-connected neural network**, meaning every sensor is connected to every joint:
 
-body_brain.png
+<img src="./media/body_brain.png" />
 
 The construction of these genotypes can be further inspected in `randomgenotype.py`.
 
@@ -43,7 +53,7 @@ Every generation consists of a population of creatures. Only the most fit creatu
 
 This simulation uses a **sweeping algorithm** to determine which creatures will survive. In other words "the best so far" will be chosen to survive. If a later creature is inspected and has a higher fitness than previous creatures, it will take the remaining spots until a creature with a higher fitness is found. This algorithm balances choosing diverse creatures and the most fit creatures (the **"explore-exploit"** problem).
 
-selection_algorithm.png
+<img src="./media/selection_algorithm.png" />
 
 The selection algorithm can be seen in the `Select()` function within the `parallelHillClimber.py` file.
 
@@ -61,7 +71,19 @@ Using the aforementioned methods, an incredible diversity of creatures were evol
 
 ### There were many hoppers, some side-swipers, and even a biped:
 
-IMAGES
+<p float="left">
+  <img src="./media/creatures/epoch0_generation500.png" />
+  <img src="./media/creatures/epoch1_generation500.png" />
+  <img src="./media/creatures/epoch2_generation500.png" />
+  <img src="./media/creatures/epoch3_generation500.png" />
+  <img src="./media/creatures/epoch4_generation500.png" />
+  <img src="./media/creatures/epoch5_generation500.png" />
+  <img src="./media/creatures/epoch6_generation500.png" />
+  <img src="./media/creatures/epoch7_generation500.png" />
+  <img src="./media/creatures/epoch8_generation500.png" />
+  <img src="./media/creatures/epoch9_generation500.png" />
+  <!-- <img src="/img3.png" width="100" /> -->
+</p>
 
 The prevelance of hoppers is likely due to a limitation in the simulation: this simulation only supports joints which rotate in 1 dimention. This makes it easier for creatures to move forward, and more difficult for creatures to evolve more complex locomotion strategies.
 
