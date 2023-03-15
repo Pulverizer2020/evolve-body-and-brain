@@ -120,35 +120,35 @@ The following are the lineages of some robots within the `saved_data` folder, sh
 
 <p float="left">
   <figure>
-    <img src='./media/lineages/epoch2/gen0' width="100" alt='missing' />
+    <img src='./media/lineages/epoch2/gen0.png' width="100" alt='missing' />
     <figcaption>Gen 0. Fitness: 5.15</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch2/gen50' width="100" alt='missing' />
+    <img src='./media/lineages/epoch2/gen50.png' width="100" alt='missing' />
     <figcaption>Gen 50. Fitness: 13.04</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch2/gen100' width="100" alt='missing' />
+    <img src='./media/lineages/epoch2/gen100.png' width="100" alt='missing' />
     <figcaption>Gen 100. Fitness: 13.04</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch2/gen150' width="100" alt='missing' />
+    <img src='./media/lineages/epoch2/gen150.png' width="100" alt='missing' />
     <figcaption>Gen 150. Fitness: 13.50</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch2/gen200' width="100" alt='missing' />
+    <img src='./media/lineages/epoch2/gen200.png' width="100" alt='missing' />
     <figcaption>Gen 200. Fitness: 14.43</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch2/gen300' width="100" alt='missing' />
+    <img src='./media/lineages/epoch2/gen300.png' width="100" alt='missing' />
     <figcaption>Gen 300. Fitness: 15.16</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch2/gen400' width="100" alt='missing' />
+    <img src='./media/lineages/epoch2/gen400.png' width="100" alt='missing' />
     <figcaption>Gen 400. Fitness: 15.16</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch2/gen500' width="100" alt='missing' />
+    <img src='./media/lineages/epoch2/gen500.png' width="100" alt='missing' />
     <figcaption>Gen 500. Fitness: 15.16</figcaption>
   </figure>
 </p>
@@ -157,35 +157,35 @@ The following are the lineages of some robots within the `saved_data` folder, sh
 
 <p float="left">
   <figure>
-    <img src='./media/lineages/epoch4/gen0' width="100" alt='missing' />
+    <img src='./media/lineages/epoch4/gen0.png' width="100" alt='missing' />
     <figcaption>Gen 0. Fitness: 2.64</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch4/gen50' width="100" alt='missing' />
+    <img src='./media/lineages/epoch4/gen50.png' width="100" alt='missing' />
     <figcaption>Gen 50. Fitness: 7.85</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch4/gen100' width="100" alt='missing' />
+    <img src='./media/lineages/epoch4/gen100.png' width="100" alt='missing' />
     <figcaption>Gen 100. Fitness: 9.31</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch4/gen150' width="100" alt='missing' />
+    <img src='./media/lineages/epoch4/gen150.png' width="100" alt='missing' />
     <figcaption>Gen 150. Fitness: 9.31</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch4/gen200' width="100" alt='missing' />
+    <img src='./media/lineages/epoch4/gen200.png' width="100" alt='missing' />
     <figcaption>Gen 200. Fitness: 11.96</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch4/gen300' width="100" alt='missing' />
+    <img src='./media/lineages/epoch4/gen300.png' width="100" alt='missing' />
     <figcaption>Gen 300. Fitness: 12.87</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch4/gen400' width="100" alt='missing' />
+    <img src='./media/lineages/epoch4/gen400.png' width="100" alt='missing' />
     <figcaption>Gen 400. Fitness: 12.87</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch4/gen500' width="100" alt='missing' />
+    <img src='./media/lineages/epoch4/gen500.png' width="100" alt='missing' />
     <figcaption>Gen 500. Fitness: 12.87</figcaption>
   </figure>
 </p>
@@ -194,35 +194,35 @@ The following are the lineages of some robots within the `saved_data` folder, sh
 
 <p float="left">
   <figure>
-    <img src='./media/lineages/epoch8/gen0' width="100" alt='missing' />
+    <img src='./media/lineages/epoch8/gen0.png' width="100" alt='missing' />
     <figcaption>Gen 0. Fitness: 3.08</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch8/gen50' width="100" alt='missing' />
+    <img src='./media/lineages/epoch8/gen50.png' width="100" alt='missing' />
     <figcaption>Gen 50. Fitness: 6.05</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch8/gen100' width="100" alt='missing' />
+    <img src='./media/lineages/epoch8/gen100.png' width="100" alt='missing' />
     <figcaption>Gen 100. Fitness: 11.85</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch8/gen150' width="100" alt='missing' />
+    <img src='./media/lineages/epoch8/gen150.png' width="100" alt='missing' />
     <figcaption>Gen 150. Fitness: 14.02</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch8/gen200' width="100" alt='missing' />
+    <img src='./media/lineages/epoch8/gen200.png' width="100" alt='missing' />
     <figcaption>Gen 200. Fitness: 14.66</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch8/gen300' width="100" alt='missing' />
+    <img src='./media/lineages/epoch8/gen300.png' width="100" alt='missing' />
     <figcaption>Gen 300. Fitness: 15.71</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch8/gen400' width="100" alt='missing' />
+    <img src='./media/lineages/epoch8/gen400.png' width="100" alt='missing' />
     <figcaption>Gen 400. Fitness: 17.22</figcaption>
   </figure>
   <figure>
-    <img src='./media/lineages/epoch8/gen500' width="100" alt='missing' />
+    <img src='./media/lineages/epoch8/gen500.png' width="100" alt='missing' />
     <figcaption>Gen 500. Fitness: 18.66</figcaption>
   </figure>
 </p>
