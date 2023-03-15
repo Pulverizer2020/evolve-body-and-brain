@@ -120,7 +120,7 @@ The following are the lineages of some robots within the `saved_data` folder, sh
 
 <p float="left">
   <figure>
-    <img src='./media/lineages/epoch2/gen0.png' width="100" alt='missing' />
+    <img src='./media/lineages/epoch2/gen0.png' width="100" alt='missing' style="margin-top:-5px" />
     <figcaption>Gen 0. Fitness: 5.15</figcaption>
   </figure>
   <figure>
