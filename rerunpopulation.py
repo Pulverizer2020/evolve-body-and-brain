@@ -4,7 +4,7 @@ import os
 from parallelHillClimber import PARALLEL_HILL_CLIMBER
 
 # rerun the best in a picked population
-population = pickle.load(open("saved_data/epoch8/populations/population_gen50.p", "rb"))
+population = pickle.load(open("saved_data/epoch8/populations/population_gen500.p", "rb"))
 
 phc = PARALLEL_HILL_CLIMBER(saveData=False, epoch=0, population=population)
 phc.Show_Best()
