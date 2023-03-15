@@ -46,17 +46,6 @@ class SOLUTION():
     self.body_builder.Build_Body()
 
   def Mutate(self):
-    # firstRandomRow = random.randint(0,c.numSensorNeurons-1)
-    # firstRandomColumn = random.randint(0,c.numHiddenNeurons-1)
-    # self.firstLayerWeights[firstRandomRow,firstRandomColumn] = random.random()*2 - 1
-
-    # secondRandomRow = random.randint(0,c.numHiddenNeurons-1)
-    # secondRandomColumn = random.randint(0,c.numMotorNeurons-1)
-    # self.secondLayerWeights[secondRandomRow,secondRandomColumn] = random.random()*2 - 1
-
-    # self.firstLayerWeights[(firstRandomRow + 1) % c.numSensorNeurons,(firstRandomColumn + 1) % c.numHiddenNeurons] = random.random()*2 - 1
-    # self.secondLayerWeights[(secondRandomRow + 1) % c.numHiddenNeurons,(secondRandomColumn + 1) % c.numSensorNeurons] = random.random()*2 - 1
-
     #### Mutate parameters of nodes and edges ####
     # nodes
     for i in self.body_builder.genotype.nodes:
