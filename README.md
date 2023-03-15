@@ -119,8 +119,10 @@ The following are the lineages of some robots within the `saved_data` folder, sh
 #### Epoch 2
 
 <p float="left">
+<p>
     <img src='./media/lineages/epoch2/gen0.png' width="100" alt='missing' style="margin-top:-5px" />
     <em>Gen 0. Fitness: 5.15</em>
+</p>
     <img src='./media/lineages/epoch2/gen50.png' width="100" alt='missing' />
     <em>Gen 50. Fitness: 13.04</em>
     <img src='./media/lineages/epoch2/gen100.png' width="100" alt='missing' />
