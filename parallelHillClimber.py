@@ -109,6 +109,19 @@ class PARALLEL_HILL_CLIMBER():
     
     bestParent.Start_Simulation("GUI", parallel=False, deleteBrainAndBody="False") # don't run this simulation in parallel with other things
 
+  def Show_Worst(self):
+    worstParentFitness = np.inf
+    worseParent = None
+    for key in self.parents:
+      
+      if self.parents[key].fitness < worstParentFitness:
+        worseParent = copy.deepcopy(self.parents[key])
+        worstParentFitness = self.parents[key].fitness
+    
+    print("worst fitness:", worstParentFitness)
+    
+    worseParent.Start_Simulation("GUI", parallel=False, deleteBrainAndBody="False") # don't run this simulation in parallel with other things
+
   def Save_Data(self, thisRoundBestFitness:float):
     if self.saveData:
       # save the best fitness every generation

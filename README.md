@@ -8,9 +8,9 @@ Made using [pybullet](https://pybullet.org/wordpress/index.php/forum-2/), extend
 
 # Explainer Video
 
-[Link:](https://youtube.com)
+[Link:](https://youtu.be/DBjxkxaUjUY)
 
-[![Explainer Video Image And Link](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![Explainer Video Image And Link](https://img.youtube.com/vi/DBjxkxaUjUY/0.jpg)](https://www.youtube.com/watch?v=DBjxkxaUjUY)
 
 # Running the Code
 
